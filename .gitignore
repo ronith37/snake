@@ -1,1 +1,8 @@
 .DS_Store
+# Local git metadata/workbench probes used by this environment
+/git-meta/
+/git-meta-fresh/
+/.git2/
+/.git2_probe_old_*/
+/_git_ui_probe/
+/gitmeta_probe/

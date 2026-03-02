@@ -41,10 +41,13 @@ function render() {
 
   if (state.gameOver) {
     statusEl.textContent = 'Game over. Press Restart to play again.';
+    statusEl.dataset.state = 'over';
   } else if (!state.started) {
     statusEl.textContent = 'Use arrow keys or WASD to start.';
+    statusEl.dataset.state = 'idle';
   } else {
-    statusEl.textContent = '';
+    statusEl.textContent = 'Playing...';
+    statusEl.dataset.state = 'playing';
   }
 }
 

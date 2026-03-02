@@ -8,28 +8,39 @@
   </head>
   <body>
     <main class="app">
-      <header class="hud">
-        <h1>Snake</h1>
-        <div class="stats">
-          <span>Score: <strong id="score">0</strong></span>
+      <section class="game-card">
+        <header class="hud">
+          <div class="title-wrap">
+            <p class="eyebrow">Classic Arcade</p>
+            <h1>Snake</h1>
+          </div>
           <button id="restart" type="button">Restart</button>
-        </div>
-      </header>
+        </header>
 
-      <section class="board-wrap" aria-label="Snake board">
-        <div id="board" class="board" role="grid" aria-label="Snake game grid"></div>
+        <div class="meta">
+          <div class="score-card">
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <p id="status" class="status" aria-live="polite">Use arrow keys or WASD to start.</p>
+        </div>
+
+        <section class="board-wrap" aria-label="Snake board">
+          <div id="board" class="board" role="grid" aria-label="Snake game grid"></div>
+        </section>
+
+        <section class="controls" aria-label="Touch controls">
+          <div class="controls-grid">
+            <span></span>
+            <button data-dir="up" type="button" aria-label="Move up">↑</button>
+            <span></span>
+            <button data-dir="left" type="button" aria-label="Move left">←</button>
+            <button data-dir="down" type="button" aria-label="Move down">↓</button>
+            <button data-dir="right" type="button" aria-label="Move right">→</button>
+          </div>
+        </section>
       </section>
 
-      <p id="status" class="status" aria-live="polite">Use arrow keys or WASD to start.</p>
-
-      <section class="controls" aria-label="Touch controls">
-        <button data-dir="up" type="button" aria-label="Move up">↑</button>
-        <div class="controls-row">
-          <button data-dir="left" type="button" aria-label="Move left">←</button>
-          <button data-dir="down" type="button" aria-label="Move down">↓</button>
-          <button data-dir="right" type="button" aria-label="Move right">→</button>
-        </div>
-      </section>
     </main>
 
     <script type="module" src="./src/game.js"></script>
