@@ -1,0 +1,103 @@
+:root {
+  --bg: #f4f4f4;
+  --fg: #222;
+  --grid: #d3d3d3;
+  --snake: #2f2f2f;
+  --food: #b42323;
+  --panel: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.app {
+  min-height: 100vh;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hud h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+button {
+  border: 1px solid #a8a8a8;
+  background: var(--panel);
+  color: var(--fg);
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.board-wrap {
+  background: var(--panel);
+  border: 1px solid #c7c7c7;
+  padding: 8px;
+}
+
+.board {
+  display: grid;
+  width: min(88vw, 560px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border: 1px solid var(--grid);
+  background: #fafafa;
+}
+
+.cell {
+  border: 1px solid var(--grid);
+}
+
+.cell.snake {
+  background: var(--snake);
+}
+
+.cell.food {
+  background: var(--food);
+}
+
+.status {
+  margin: 0;
+  min-height: 1.2em;
+}
+
+.controls {
+  justify-self: center;
+  display: grid;
+  gap: 8px;
+}
+
+.controls-row {
+  display: flex;
+  gap: 8px;
+}
+
+@media (min-width: 900px) {
+  .controls {
+    display: none;
+  }
+}
